@@ -1,0 +1,14 @@
+{
+  "name": "@stwind/source-hans-serif-a-glyph-atlas",
+  "main": "c48a5cd7f0d14c30@1492.js",
+  "version": "1492.0.0",
+  "homepage": "https://observablehq.com/@stwind/source-hans-serif-a-glyph-atlas",
+  "author": {
+    "name": "Zihou Ng",
+    "url": "https://observablehq.com/@stwind"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4 - 5"
+  }
+}
