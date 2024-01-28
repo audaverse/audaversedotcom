@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<title>Source Hans Serif: A Glyph Atlas</title>
+<title>audaverse</title>
 <link rel="stylesheet" type="text/css" href="./inspector.css">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
 <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="module">
 
 import define from "./index.js";
@@ -14,5 +15,22 @@ import {Runtime, Library, Inspector} from "./runtime.js";
 
 const runtime = new Runtime();
 const main = runtime.module(define, Inspector.into(document.body));
-
 </script>
+<script>
+    //hack to remove the extra observable data I am not interested in
+    setTimeout(function(){
+        const element1 = document.getElementById("webgl");
+        const element2 = document.getElementById("misc");
+        const element3 = document.getElementById("utils");
+        const element4 = document.getElementById("appendix");
+       element1.remove();
+       element2.remove();
+       element3.remove();
+       element4.remove();
+       const summary = document.getElementsByTagName("details");
+       for(var i = 0; i < summary.length; i++){
+        summary[i].style.display = 'none';;
+
+       }
+}, 250);
+ </script>
